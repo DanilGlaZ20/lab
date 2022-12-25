@@ -15,7 +15,7 @@ namespace serviceone.Controllers;
         public HomeController()
         {
             _client = new HttpClient();
-            _client.BaseAddress = new Uri(Environment.GetEnvironmentVariable("URI_ENV") ?? string.Empty);
+            _client.BaseAddress = new Uri(Environment.GetEnvironmentVariable("Weather")!);
             _client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
         }

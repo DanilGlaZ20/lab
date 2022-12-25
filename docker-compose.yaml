@@ -17,6 +17,8 @@ services:
       - "5050:80"
     networks:
       - services-network
+    environment:
+      - Weather=http://servicetwo:80/
   
   servicetwo:
     container_name: servicetwo
